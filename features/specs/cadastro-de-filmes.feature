@@ -20,4 +20,20 @@ Funcionalidade: Cadastro de Filmes
             | "spider"   |
             | "jocker"   | 
 
-            
+    @attempt_movie
+    Esquema do Cenario: Campos Obrigtorios
+       O gestor de catálogo tenta cadastrar um novo filme, mas esquece 
+       de preeencher um dos campos obrigatórios, em seguida, o sistema
+       exibe uma notificação para o usuário
+
+        Dado que <codigo> é um novo filme
+        Quando eu faço o cadastro deste filme    
+        Então devo ver a notificação <texto>
+
+        Exemplos:
+            | codigo      |  texto                                         |  
+            | "no_title"  | "Oops - Filme sem titulo. Pode isso Arnaldo?"  |
+            | "no_status" | "Oops - O status deve ser informado!"          |
+            | "no_year"   | "Oops - Faltou o ano de lançamento também!"    |
+            | "no_date"   | "Oops - Quase lá, só falta a data de estréia!" |
+           

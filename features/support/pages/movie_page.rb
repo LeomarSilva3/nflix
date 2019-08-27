@@ -17,6 +17,11 @@ class MoviePage
 
     end
 
+    def select_status(status)
+        find('input[placeholder=Status]').click
+        find('.el-select-dropdown__item', text:status).click
+    end
+
 
 
     def upload(file)
@@ -34,17 +39,18 @@ class MoviePage
     
     def create(movie)
         find('input[name=title]').set movie["title"]
-        find('input[placeholder=Status]').click
-        find('.el-select-dropdown__item', text:movie["status"]).click
+
+        select_status(movie["status"]) unless movie["status"].empty?
+       
         find('input[name=year]').set movie["year"]
         find('input[name=release_date]').set movie["release_date"]
-        find('input[name=release_date]').send_keys :tab
 
         add_cast(movie["cast"])
 
         find('textarea[name=overview]').set movie["overview"]
     
-        upload(movie["cover"])
+        #verifica if upload não tem valor  (if ao contrario)
+        upload(movie["cover"]) unless movie["cover"].empty?
 
         find('#create-movie').click
     end    
@@ -52,6 +58,10 @@ class MoviePage
 
     def movie_tr(movie)
       find('table tbody tr', text: movie["title"])
+    end
+
+    def alert
+        find('.alert').text 
     end
     
 end    
