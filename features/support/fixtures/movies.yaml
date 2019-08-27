@@ -14,6 +14,14 @@ spider:
   cast: ["Ton Holland", "Samuel L. Jackoson", "Marisa Tomei"]
   overview: "Peter park está em uma viagem pela Europa e é convocado por Nick Fury para uma reunião."
   cover: "spider.jpg"
+deadpool2:
+  title: "Deadpool 2"
+  status: "Disponível"
+  year: 2018
+  release_date: 04/07/2018
+  cast: ["Ryan Reynolds", "Josh Brolin"]
+  overview: "O super soldado Cable vem do futuro."
+  cover: "dp2.png"
 jocker:
   title: "Coringa"
   status: "Pré-venda"
