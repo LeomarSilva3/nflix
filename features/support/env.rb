@@ -13,5 +13,5 @@ Capybara.configure do |config|
   config.default_driver = :selenium_chrome#_headless
   config.app_host = "localhost:8080/login"
   #config timeout implicit
-  config.default_max_wait_time = 5
+  config.default_max_wait_time = 10
 end    

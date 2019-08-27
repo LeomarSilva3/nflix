@@ -20,6 +20,7 @@ class MoviePage
     def select_status(status)
         find('input[placeholder=Status]').click
         find('.el-select-dropdown__item', text:status).click
+        
     end
 
 
