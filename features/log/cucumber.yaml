@@ -1,0 +1,7 @@
+ 
+default:  -p html -p dot
+
+#config Test Report
+bdd: --format pretty
+dot: --format progress
+html: --format html --out=log/report.html
