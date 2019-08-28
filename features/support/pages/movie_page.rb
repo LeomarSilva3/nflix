@@ -57,8 +57,13 @@ class MoviePage
     end    
     
 
-    def movie_tr(movie)
-      find('table tbody tr', text: movie["title"])
+    def movie_tr(title)
+      find('table tbody tr', text: title)
+    end
+
+    def remove(title)
+      movie = movie_tr(title)
+      movie.find(".btn-trash").click
     end
 
     def message

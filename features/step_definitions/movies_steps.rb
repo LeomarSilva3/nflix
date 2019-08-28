@@ -5,7 +5,7 @@ Dado("que {string} é um novo filme") do |codigo|
    Database.new.delete_movie(@movie["title"])
 end
 
-E("este filme já existe no catálogo") do
+Dado("este filme já existe no catálogo") do
    Database.new.insert_movie(@movie)
 end
  
@@ -16,7 +16,7 @@ end
  end
  
  Então("devo ver o novo filme na lista") do
-  result = @movie_page.movie_tr(@movie)
+  result = @movie_page.movie_tr(title)
   #validando o titulo do filme
   expect(result).to have_text @movie["title"]
   #validando o status do filme
@@ -30,4 +30,26 @@ end
 
 Então("devo ver a notificaçãoo {string}") do |alert|
    expect(@movie_page.alert_message).to eql alert
+end
+
+
+Dado("que {string} está no catálogo") do |movie_code|
+   #dynamic steps
+   steps %{
+       Dado que "#{movie_code}" é um novo filme
+       E este filme já existe no catálogo    
+   }
+   
+end
+
+Quando("eu solicito a exclusão") do
+   @movie_page.remove(@movie["title"])
+end
+
+Quando("eu confirmo a solicitação") do
+
+end
+
+Então("este item deve ser removido do catálogo") do
+
 end
