@@ -40,6 +40,6 @@ Funcionalidade: Cadastro de Filmes
     @dup_movie
     Cenario: Duplicado            
        Dado que "deadpool2" é um novo filme
-       Mas este filme já existe no catálogo     
+       E este filme já existe no catálogo     
        Quando eu faço o cadastro deste filme
        Então devo ver a notificação "Oops - Este titulo já existe no Ninjaflix."
