@@ -61,8 +61,13 @@ class MoviePage
       find('table tbody tr', text: movie["title"])
     end
 
-    def alert_message
+    def message
         find('.alert').text
+        
+    end
+
+    def alert_message
+        find('.alert-danger').text
         
     end
     

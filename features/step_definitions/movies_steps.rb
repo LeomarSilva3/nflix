@@ -25,7 +25,9 @@ end
 end
 
 Então("devo ver a notificação {string}") do |expect_alert|
-   expect(@movie_page.alert_message).to eql expect_alert
+   expect(@movie_page.message).to eql expect_alert
 end
- 
- 
+
+Então("devo ver a notificaçãoo {string}") do |alert|
+   expect(@movie_page.alert_message).to eql alert
+end
