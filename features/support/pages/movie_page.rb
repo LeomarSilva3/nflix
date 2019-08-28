@@ -75,5 +75,14 @@ class MoviePage
         find('.alert-danger').text
         
     end
+
+    def swal2_confirm
+        find('.swal2-confirm').click
+    end
+
+    #verifica setem o filme no grid
+    def has_no_movie(title)
+        page.has_css?('table tbody tr', text: title)
+    end
     
 end    

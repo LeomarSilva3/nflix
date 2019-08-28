@@ -47,9 +47,9 @@ Quando("eu solicito a exclusão") do
 end
 
 Quando("eu confirmo a solicitação") do
-
+   @movie_page.swal2_confirm
 end
 
 Então("este item deve ser removido do catálogo") do
-
+   expect(@movie_page.has_no_movie(@movie['title'])).to be true
 end
