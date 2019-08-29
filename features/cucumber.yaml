@@ -1,0 +1,14 @@
+ 
+# default:  -p html -p dot
+
+# #config Test Report
+# bdd: --format pretty
+# dot: --format progress
+# html: --format html --out=log/report.html
+
+---
+default: -p html -p bdd -p json
+html: --format html --out=log/features.html
+dot: --format progress
+bdd: --format pretty
+json: --format json -o "report.json"
