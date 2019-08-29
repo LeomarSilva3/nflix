@@ -11,7 +11,7 @@ end
  
  Quando("eu faço o cadastro deste filme") do
     @movie_page.add
-    @movie_page.create(@movie)
+    @movie_page.form.create(@movie)
    
  end
  
@@ -25,12 +25,12 @@ end
 end
 
 Então("devo ver a notificação {string}") do |expect_alert|
-   expect(@movie_page.message).to eql expect_alert
+   expect(@movie_page.form.message).to eql expect_alert
 end
 
 
 Então("devo ver a mensagem de erro {string}") do |alert|
-   expect(@movie_page.message_erro).to eql alert
+   expect(@movie_page.form.message_erro).to eql alert
 end
 
 
@@ -49,7 +49,7 @@ Quando("eu solicito a exclusão") do
 end
 
 Quando("eu confirmo a solicitação") do
-   @movie_page.swal2_confirm
+   @movie_page.sweet_alert.confirm
 end
 
 Então("este item deve ser removido do catálogo") do
@@ -57,7 +57,7 @@ Então("este item deve ser removido do catálogo") do
 end
 
 Quando("cancelo a solicitação") do
-   @movie_page.swal2_cancel
+   @movie_page.sweet_alert.cancel
 end
  
 Então("este item deve permanecer no catálogo") do

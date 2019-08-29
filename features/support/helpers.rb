@@ -1,13 +1,14 @@
 # técnica do suport code do cucumber
 module Helpers
+
+    #melhora a peformance dabusca do token usando um break
     def get_token
-        #tempo de busca por default do capybara 2 segundos
-        timeout = Capybara.default_max_wait_time
         #loop
-        timeout.times do
+        2.times do
             js_script = 'return window.localStorage.getItem("default_auth_token");'
             @token = page.execute_script(js_script)
-            sleep 0.2
+            break if @token != nil
+            sleep 0.1
         end
         #retorna o valor do token
         @token
