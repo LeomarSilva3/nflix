@@ -3,6 +3,7 @@ require "capybara/cucumber"
 require "selenium-webdriver"
 require "rspec"
 require "os"
+require "report_builder"
 
 require_relative "helpers"
 
