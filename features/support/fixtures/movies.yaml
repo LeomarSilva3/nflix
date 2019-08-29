@@ -29,7 +29,16 @@ dbz:
   release_date: 04/07/2009
   cast: []
   overview: ""
-  cover: ""  
+  cover: ""
+10_coisas:
+  title: "10 coisas que odeio em você"
+  status: "Disponível"
+  year: 2020
+  release_date: 01/12/2020
+  cast: []
+  overview: ""
+  cover: ""    
+
 jocker:
   title: "Coringa"
   status: "Pré-venda"

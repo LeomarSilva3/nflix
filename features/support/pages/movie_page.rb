@@ -78,9 +78,21 @@ class MoviePage
         find('.swal2-confirm').click
     end
 
-    #verifica setem o filme no grid
+    def swal2_cancel
+        find('.swal2-cancel').click
+    end
+
+
+    #verifica não ter o filme no catalogo
     def has_no_movie(title)
         page.has_no_css?('table tbody tr', text: title)
     end
+
+    #verifica não ter o filme no catalogo
+    def has_movie(title)
+        page.has_css?('table tbody tr', text: title)
+    end
+
+    
     
 end    
