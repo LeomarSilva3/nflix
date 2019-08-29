@@ -1,6 +1,6 @@
 #Before gereric
 Before do
-    page.current_window.resize_to(1920, 1080) 
+    page.current_window.resize_to(1920,1080) 
     @login_page = LoginPage.new
     @sidebar = SidebarView.new
     @movie_page = MoviePage.new 

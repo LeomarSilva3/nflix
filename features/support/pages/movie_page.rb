@@ -7,10 +7,13 @@ class MoviePage
         @movie_list_css = 'table tbody tr'
     end
 
+    #instancia de uma subpagina
     def form
         MovieAdd.new
     end 
 
+
+    #instancia de uma subpagina
     def sweet_alert
         SweetAlert.new
     end
