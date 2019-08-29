@@ -1,5 +1,5 @@
 #language: pt
-@login
+@login @cadastro_
 Funcionalidade: Cadastro de Filmes
     Para que eu possa disponibilizar novos titulos no catalogo
     Sendo um gestor de catalogo
@@ -42,4 +42,4 @@ Funcionalidade: Cadastro de Filmes
        Dado que "deadpool2" é um novo filme
        E este filme já existe no catálogo     
        Quando eu faço o cadastro deste filme
-       Então devo ver a notificaçãoo "Oops - Este titulo já existe no Ninjaflix."
+       Então devo ver a mensagem de erro "Oops - Este titulo já existe no Ninjaflix."

@@ -16,7 +16,7 @@ end
  end
  
  Então("devo ver o novo filme na lista") do
-  result = @movie_page.movie_tr(title)
+  result = @movie_page.movie_tr(@movie["title"])
   #validando o titulo do filme
   expect(result).to have_text @movie["title"]
   #validando o status do filme
@@ -28,9 +28,11 @@ Então("devo ver a notificação {string}") do |expect_alert|
    expect(@movie_page.message).to eql expect_alert
 end
 
-Então("devo ver a notificaçãoo {string}") do |alert|
-   expect(@movie_page.alert_message).to eql alert
+
+Então("devo ver a mensagem de erro {string}") do |alert|
+   expect(@movie_page.message_erro).to eql alert
 end
+
 
 
 Dado("que {string} está no catálogo") do |movie_code|

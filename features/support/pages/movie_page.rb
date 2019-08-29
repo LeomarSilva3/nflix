@@ -62,18 +62,16 @@ class MoviePage
     end
 
     def remove(title)
-      movie = movie_tr(title)
-      movie.find(".btn-trash").click
+      movie_tr(title).find(".btn-trash").click
     end
 
     def message
-        find('.alert').text
+        find('.alert-info').text
         
     end
 
-    def alert_message
-        find('.alert-danger').text
-        
+    def message_erro
+        find('.alert-danger').text 
     end
 
     def swal2_confirm
@@ -82,7 +80,7 @@ class MoviePage
 
     #verifica setem o filme no grid
     def has_no_movie(title)
-        page.has_css?('table tbody tr', text: title)
+        page.has_no_css?('table tbody tr', text: title)
     end
     
 end    
