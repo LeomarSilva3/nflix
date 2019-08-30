@@ -8,5 +8,6 @@ gem "os", "1.0.1"
 gem "pg", "1.1.4"
 gem "report_builder"
 gem "allure-cucumber"
+gem "bundler", "2.0.2"
 
 
