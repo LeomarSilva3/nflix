@@ -8,7 +8,7 @@
 
 ---
 default: -p html -p bdd -p json
-html: --format html --out=features.html
+html: --format html --out=log/features.html
 dot: --format progress
 bdd: --format pretty
-json: --format json -o "report.json"
+json: --format json -o --out=log/"report.json"
