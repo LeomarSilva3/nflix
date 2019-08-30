@@ -27,7 +27,7 @@ After do |scenario|
     nome_cenario = nome_cenario.gsub(' ','_').downcase!
     screenshot = "log/screenshots/#{nome_cenario}.png"
     page.save_screenshot(screenshot)
-    embed(screenshot, 'image/png', 'Print maroto :)')
+    embed(screenshot, 'image/png', 'Screeshot :)')
  end
 
  def add_browser_logs
