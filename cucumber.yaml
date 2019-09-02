@@ -7,7 +7,8 @@
 
 
 ---
-default: -p html -p bdd -p json
+default: -p dev -p bdd -p json
+dev: ENV_TYPE=dev
 html: --format html --out=log/features.html
 dot: --format progress
 bdd: --format pretty

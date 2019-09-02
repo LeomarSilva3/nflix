@@ -14,7 +14,7 @@ pipeline {
         }
         stage("Testes"){
             steps {
-                sh "echo 'simulando um teste automatizado'"
+                sh "bundle exec cucumber'"
             }
         }
     }
