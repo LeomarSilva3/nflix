@@ -1,10 +1,10 @@
 pipeline {
     agent any
-    
+
     stages {
         stage("Build") {
             steps {
-                sh "bundle install"
+                sh "echo 'simulando um build'"
             }
         }
         stage("Testes"){
