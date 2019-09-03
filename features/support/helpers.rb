@@ -8,7 +8,7 @@ module Helpers
             js_script = 'return window.localStorage.getItem("default_auth_token");'
             @token = page.execute_script(js_script)
             break if @token != nil
-            sleep 1.5
+            sleep 1
         end
         #retorna o valor do token
         @token
