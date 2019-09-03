@@ -1,5 +1,5 @@
 ---
-default: -p dev -p json -p chrome
+default: -p dev -p json -p chrome -p bdd
 html: --format html --out=log/features.html
 dot: --format progress
 bdd: --format pretty

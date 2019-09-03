@@ -3,6 +3,7 @@ class LoginPage
 
     def go
         visit "/"
+        
     end
 
     def with(email, senha)

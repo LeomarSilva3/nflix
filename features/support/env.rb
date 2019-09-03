@@ -4,7 +4,10 @@ require 'capybara/rspec'
 require 'selenium-webdriver'
 require 'report_builder'
 require 'allure-cucumber'
+require_relative "helpers"
 
+
+World(Helpers)
 #configuração de ambientes
 CONFIG = YAML.load_file(File.join(Dir.pwd, "features/support/config/#{ENV["ENV_TYPE"]}.yaml"))
 
