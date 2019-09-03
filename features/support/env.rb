@@ -5,6 +5,7 @@ require 'selenium-webdriver'
 require 'report_builder'
 require 'allure-cucumber'
 require_relative "helpers"
+require 'os'
 
 
 World(Helpers)
