@@ -23,6 +23,6 @@ Esquema do Cenario: Logim sem sucesso
       | "tony@stark.com"   | "545y4"    | "Usuário e/ou senha inválidos" |
       | "sdfgdf@gmail.com" | "12342"    | "Usuário e/ou senha inválidos" |
       | ""                 | "abcsdffg" | "Opps. Cadê o email?"          |
-      | "teste@gmail.com"  | ""         | "Opps. Cadê a senha?"          |
+      | "teste@gmail.com"  | ""         | "simulando um erro?"          |
 
 
