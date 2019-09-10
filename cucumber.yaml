@@ -8,7 +8,7 @@ dev: ENV_TYPE=dev
 firefox: BROWSER=firefox
 chrome: BROWSER=chrome
 headless: BROWSER=headless
-ci: -p dev -p headless -p json -p pretty -p bdd
+ci: -p dev -p headless -p json -p pretty
 progress: --format progress
 pretty: --format pretty
 

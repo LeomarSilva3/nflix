@@ -9,7 +9,7 @@ end
 Então("devo ser autenticado") do
    
     # verificar se o usuario está realmente authenticado atravez do seu token
-    expect(get_token.length).to be 147
+    expect(get_token.length).to be 148
 end
 
 Então("devo ver {string} na area logada") do |usuario|
