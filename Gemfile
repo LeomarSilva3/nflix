@@ -8,6 +8,7 @@ gem "os", "1.0.1"
 gem "pg", "1.1.4"
 gem "report_builder"
 gem "nokogiri", ">= 1.10.4"
+gem "allure-cucumber"
 
 
 
