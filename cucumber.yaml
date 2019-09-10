@@ -1,9 +1,9 @@
 ---
-default: -p dev -p json -p chrome -p bdd
+default: -p dev -p json -p headless -p bdd
 html: --format html --out=log/features.html
 dot: --format progress
 bdd: --format pretty
-json: --format json -o --out=log/"report.json"
+json: --format json --out=log/report.json
 dev: ENV_TYPE=dev
 firefox: BROWSER=firefox
 chrome: BROWSER=chrome

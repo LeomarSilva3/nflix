@@ -6,7 +6,7 @@ class LoginPage
         
     end
 
-    def with(email, senha)
+    def with(email,senha)
        find("input[id=emailId]").set email
        find("input[id=passId]").set senha
        click_button "Entrar"

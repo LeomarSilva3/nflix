@@ -1,8 +1,8 @@
 
 
 Quando("eu faço login com {string} e {string}") do |email, senha|
-   @login_page.go
-   @login_page.with(email, senha)
+  @login_page.go
+  @login_page.with(email, senha)
 
 end
 
