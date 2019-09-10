@@ -35,6 +35,6 @@ CONFIG = YAML.load_file(File.join(Dir.pwd, "features/support/config/#{ENV["ENV_T
 
 Capybara.configure do |config|
   config.default_driver = @driver#:selenium_chrome#_headless
-  config.default_max_wait_time = 20
+  config.default_max_wait_time = 15
   config.app_host = CONFIG["url"]    
 end 

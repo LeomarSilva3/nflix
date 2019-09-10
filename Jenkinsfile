@@ -16,7 +16,7 @@ pipeline {
         }
         stage("Testes"){
             steps {
-                sh "bundle exec cucumber"
+                sh "bundle exec cucumber -p ci"
             }
             post {
                 always {
