@@ -35,6 +35,6 @@ end
 
 Capybara.configure do |config|
   config.default_driver = @driver
-  config.default_max_wait_time = 15
+  config.default_max_wait_time = 10
   config.app_host = CONFIG["url"]    
 end 
