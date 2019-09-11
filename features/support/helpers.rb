@@ -3,6 +3,7 @@ module Helpers
 
     #melhora a peformance dabusca do token usando um break
     def get_token
+        timeout = Capybara.default_max_wait_time
         #loop
         2.times do
             js_script = 'return window.localStorage.getItem("default_auth_token");'
